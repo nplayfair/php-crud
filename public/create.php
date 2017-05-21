@@ -1,4 +1,7 @@
 <?php include "templates/header.php"; ?>
+
+	<h2>Add a User</h2>
+
 	<form method="post">
 		<label for="firstname">First Name</label>
 		<input type="text" name="firstname" id="firstname">
