@@ -1,8 +1,8 @@
 <?php 
-	include "templates/header.php";
 
 	if (isset($_POST['submit'])) {
 		require "../config.php";
+		require "../common.php";
 
 		try {
 			$connection = new PDO($dsn, $username, $password, $options);
@@ -32,6 +32,17 @@
 
 	}
 ?>
+
+<?php require "templates/header.php"; ?>
+
+<?php
+	if (isset($_POST['submit']) && $statement) {
+		?>
+		<blockquote>
+		<?php echo $_POST['firstname']; ?> successfully added.
+		</blockquote>
+		<?php
+	} ?>
 
 	<h2>Add a User</h2>
 
